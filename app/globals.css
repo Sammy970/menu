@@ -77,8 +77,7 @@
 
 @layer components {
   .max-container {
-    max-width: 1440px;
-    margin: 0 auto;
+    @apply max-w-[87%] m-auto;
   }
 
   .selection {
