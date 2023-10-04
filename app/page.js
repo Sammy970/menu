@@ -8,6 +8,10 @@ export default function Home() {
       <section className="mt-10">
         <Table />
       </section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
     </main>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TableCard = () => {
   return (
-    <Card className="bg-[#C8F169] w-[60%] max-md:w-980%] max-sm:w-full border-none m-auto z-10">
+    <Card className="bg-[#C8F169] w-[60%] max-lg:w-[70%] max-md:w-[90%] max-sm:w-full border-none m-auto z-10">
       <CardHeader className="p-5">
         <CardTitle className="font-hind text-2xl tracking-[0.1rem]">
           Welcome
