@@ -8,6 +8,7 @@ const Nav = () => {
           src="/Assets/coco_logo.png"
           width={70}
           height={70}
+          alt="logo"
           className="p-2 rounded-full border-[#043F2E] border-2"
         />
         <div className="">
