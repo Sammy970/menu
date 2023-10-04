@@ -1,3 +1,7 @@
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import Image from "next/image";
 
 const Nav = () => {
@@ -12,17 +16,17 @@ const Nav = () => {
           className="p-2 rounded-full border-[#043F2E] border-2"
         />
         <div className="selection">
-          <h2 className="font-khand text-3xl tracking-[2px] text-[#043F2E] ">
+          <h2 className="font-khand text-3xl max-sm:text-2xl tracking-[2px] text-[#043F2E] ">
             Home
           </h2>
-          <p className="font-hind text-lg tracking-[0.2rem] text-[#043f2eba] ">
+          <p className="font-hind text-lg max-sm:text-[17px] tracking-[0.2rem] text-[#043f2eba] ">
             Coco Bar's Kitchen
           </p>
         </div>
       </div>
 
-      <div>
-        <input type="text" />
+      <div className="rounded-full border-[#043F2e] border-2 p-3 hover:bg-[#043F2e] text-[#043f2e] hover:text-white">
+        <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" />
       </div>
     </nav>
   );

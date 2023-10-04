@@ -82,6 +82,6 @@
   }
 
   .selection {
-    @apply selection:bg-[#00373e] selection:text-[#7deaf9aa]
+    @apply selection:bg-[#00373e] selection:text-[#7deaf9aa];
   }
 }
