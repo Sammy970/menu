@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Nav = () => {
   return (
-    <nav className="flex flex-1 justify-between items-center bg-[#EEF2E3] p-4 py-3 max-container m-auto rounded-b-[23px]">
+    <nav className="flex sticky top-0 left-0 z-50 right-0 flex-1 justify-between items-center bg-[#EEF2E3] p-4 py-3 max-container m-auto rounded-b-[23px]">
       <div className="flex justify-center items-center gap-4">
         <Image
           src="/Assets/coco_logo.png"
