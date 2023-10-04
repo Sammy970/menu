@@ -11,11 +11,11 @@ const Nav = () => {
           alt="logo"
           className="p-2 rounded-full border-[#043F2E] border-2"
         />
-        <div className="">
-          <h2 className="font-khand text-3xl tracking-[2px] text-[#043F2E] selection">
+        <div className="selection">
+          <h2 className="font-khand text-3xl tracking-[2px] text-[#043F2E] ">
             Home
           </h2>
-          <p className="font-hind text-lg tracking-[0.2rem] text-[#043f2eba] selection">
+          <p className="font-hind text-lg tracking-[0.2rem] text-[#043f2eba] ">
             Coco Bar's Kitchen
           </p>
         </div>
