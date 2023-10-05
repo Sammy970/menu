@@ -25,9 +25,13 @@ const MenuCard = ({ category, setCategorySelected }) => {
   };
 
   return (
-    <Card id={category} onClick={cardClickHanlder} className="cursor-pointer">
+    <Card
+      id={category}
+      onClick={cardClickHanlder}
+      className="cursor-pointer rounded-lg ring-0 border-0 shadow-md bg-[#EEF2E3] hover:bg-[#C8F169]"
+    >
       <CardContent className="p-3">
-        <p className="flex flex-1 justify-center items-center w-full h-full">
+        <p className="flex flex-1 justify-center items-center w-full h-full font-hind leading-normal text-[19px] tracking-[0.15rem] font-semibold">
           {category}
         </p>
       </CardContent>

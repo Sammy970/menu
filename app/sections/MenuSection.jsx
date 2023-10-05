@@ -1,6 +1,7 @@
 "use client";
 
 import MenuCard, { MenuBackCard } from "@/components/MenuCard";
+import MenuItemCard from "@/components/MenuItemCard";
 import { itemMenu } from "@/constants";
 import React, { useState } from "react";
 
@@ -40,9 +41,9 @@ const MenuSection = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-3 mt-4 mb-10">
+        <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-3 mt-4">
           {selectedData.map((item) => {
-            console.log(item);
+            // console.log(item);
 
             if (!item.name) {
               return (
@@ -54,32 +55,33 @@ const MenuSection = () => {
               );
             }
           })}
-
-          {currentCategory && (
-            <div className="grid grid-cols-4 gap-3 mt-4">
-              {selectedData.map((item) => {
-                if (currentCategory in item && item.name) {
-                  return item[currentCategory].map((subItem) => (
-                    <MenuCard
-                      key={Object.keys(subItem)[0]}
-                      category={Object.keys(subItem)[0]}
-                      setCategorySelected={handleCategoryClick}
-                    />
-                  ));
-                } else if (item.name) {
-                  return (
-                    <React.Fragment key={item.name}>
-                      <p>{item.name}</p>
-                      <p>{item.price}</p>
-                      <p>{item.desc}</p>
-                    </React.Fragment>
-                  );
-                }
-                // return null;
-              })}
-            </div>
-          )}
         </div>
+
+        {currentCategory && (
+          <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-3 mt-4 mb-6">
+            {selectedData.map((item) => {
+              if (currentCategory in item && item.name) {
+                return item[currentCategory].map((subItem) => (
+                  <MenuCard
+                    key={Object.keys(subItem)[0]}
+                    category={Object.keys(subItem)[0]}
+                    setCategorySelected={handleCategoryClick}
+                  />
+                ));
+              } else if (item.name) {
+                return (
+                  <MenuItemCard
+                    key={item.name}
+                    name={item.name}
+                    price={item.price}
+                    desc={item.desc}
+                  />
+                );
+              }
+              // return null;
+            })}
+          </div>
+        )}
       </div>
     </>
   );

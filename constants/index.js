@@ -10,6 +10,11 @@ export const itemMenu = [
                 price: "INR 500",
                 desc: "Whisky - Sakurafresh Amaretto Liquor - Sweet and Sour - Aromatic Bitters XI - Vegan Form",
               },
+              {
+                name: "Jungle Bird",
+                price: "INR 500",
+                desc: "Light Rum, Dark Rum, Campari, Pineapple Juice, Lime Juice, Simple Syrup, Angostura Bitters XI - Vegan Form",
+              },
 
               // Add more cocktails here
             ],
