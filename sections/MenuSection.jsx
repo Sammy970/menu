@@ -28,9 +28,9 @@ const MenuSection = () => {
     <>
       <div className="max-container">
         <h1 className="text-white font-khand text-4xl">Explore our menu</h1>
-        <p className="text-gray-300">Dining out just got better</p>
+        <p className="text-gray-50">Dining out just got better</p>
 
-        <div className="grid grid-cols-4 gap-3 mb-10 mt-6">
+        <div className="grid grid-cols-4 gap-3 mt-6">
           {categoryStack.length > 0 && (
             <MenuBackCard
               key="back"
@@ -40,7 +40,7 @@ const MenuSection = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 gap-3">
+        <div className="grid grid-cols-2 gap-3 mt-4 mb-10">
           {selectedData.map((item) => {
             console.log(item);
 
