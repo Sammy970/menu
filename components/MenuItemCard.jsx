@@ -9,7 +9,7 @@ import {
 
 const MenuItemCard = ({ name, price, desc }) => {
   return (
-    <Card className="cursor-pointer rounded-lg ring-0 border-0 shadow-md bg-[#EEF2E3]">
+    <Card className="h-auto cursor-pointer rounded-lg ring-0 border-0 shadow-md bg-[#EEF2E3]">
       <CardHeader className="p-4 pb-1">
         <CardTitle>
           <p className="font-khand text-xl leading-5 tracking-[0.15rem]">
