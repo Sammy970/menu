@@ -13,7 +13,7 @@ export default function Home() {
         <MenuSection />
         <div className="grid grid-cols-2 gap-3 mb-10 mt-6">
           <div>
-            <p className="mt-4 text-gray-50">Dining out just got better</p>
+            <p className="mt-4 max-sm:grid-cols-1 text-gray-50">Dining out just got better</p>
           </div>
           <div>2</div>
           <div>3</div>
