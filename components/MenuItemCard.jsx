@@ -9,7 +9,7 @@ import {
 
 const MenuItemCard = ({ name, price, desc }) => {
   return (
-    <Card className="h-auto cursor-pointer rounded-lg ring-0 border-0 shadow-md bg-[#EEF2E3]">
+    <Card className="h-auto rounded-lg ring-0 border-0 shadow-md bg-[#EEF2E3] selection">
       <CardHeader className="p-4 pb-1">
         <CardTitle>
           <p className="font-khand text-xl leading-5 tracking-[0.15rem]">
@@ -21,11 +21,11 @@ const MenuItemCard = ({ name, price, desc }) => {
         <p className="font-hind text-gray-800 tracking-[0.06rem]">{desc}</p>
       </CardContent>
       <div className="flex flex-1 items-start justify-between">
-        <p className="bg-red-300 rounded-tr-lg  font-bold p-2 font-hind text-gray-900 tracking-[0.06rem]">
+        <p className="bg-red-300 rounded-tr-lg font-bold p-2.5 font-hind text-gray-900 tracking-[0.06rem]">
           ₹ {price}
         </p>
-        <button className="rounded-tl-lg bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2">
-          Add to Card
+        <button className="rounded-tl-lg bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2.5">
+          Add to Cart
         </button>
       </div>
     </Card>

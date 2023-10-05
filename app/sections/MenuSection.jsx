@@ -27,7 +27,7 @@ const MenuSection = () => {
 
   return (
     <>
-      <div className="max-container">
+      <div className="max-container selection">
         <h1 className="text-white font-khand text-4xl">Explore our menu</h1>
         <p className="text-gray-50">Dining out just got better</p>
 
