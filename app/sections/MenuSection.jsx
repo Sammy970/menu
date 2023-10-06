@@ -28,7 +28,9 @@ const MenuSection = () => {
   return (
     <>
       <div className="max-container selection">
-        <h1 className="text-white font-khand text-4xl">Explore our menu</h1>
+        <h1 className="text-white font-khand text-4xl tracking-[0.1rem]">
+          Explore our menu
+        </h1>
         <p className="text-gray-50">Dining out just got better</p>
 
         <div className="grid grid-cols-4 gap-3 mt-6">

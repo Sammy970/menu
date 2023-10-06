@@ -14,7 +14,7 @@ export default function Home() {
       <section className="mt-10">
         <MenuSection />
       </section>
-      <section className="mt-10">
+      <section className="mt-14">
         <CartItems />
       </section>
       <section>
