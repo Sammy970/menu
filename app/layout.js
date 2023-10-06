@@ -1,3 +1,4 @@
+import { ReduxProvider } from "@/redux/features/provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         ></link>
       </head>
-      <body className="min-h-screen bg-[#043F2E]">{children}</body>
+      <body className="min-h-screen bg-[#043F2E]">
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }

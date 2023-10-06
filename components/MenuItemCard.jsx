@@ -1,13 +1,54 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+"use client";
 
-const MenuItemCard = ({ name, price, desc }) => {
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+import { useDispatch, useSelector } from "react-redux";
+
+import {
+  addItem,
+  removeItem,
+  updateQuantity,
+} from "../redux/features/cartSlice";
+
+import { useState } from "react";
+
+const MenuItemCard = ({ id, name, price, desc }) => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.items);
+  const item = cart.find((item) => item.id === id);
+
+  const [quantity, setQuantity] = useState(item ? item.quantity : 0);
+
+  const addToCart = () => {
+    dispatch(addItem({ id, name, price }));
+  };
+
+  const removeFromCart = () => {
+    dispatch(removeItem(id));
+  };
+
+  const updateItemQuantity = (newQuantity) => {
+    dispatch(updateQuantity({ id, quantity: newQuantity }));
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+    if (quantity === 0) {
+      addToCart();
+    } else {
+      updateItemQuantity(quantity + 1);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (quantity === 1) {
+      removeFromCart();
+    } else {
+      updateItemQuantity(quantity - 1);
+    }
+    setQuantity(quantity - 1);
+  };
+
   return (
     <Card className="h-auto rounded-lg ring-0 border-0 shadow-md bg-[#EEF2E3] selection">
       <CardHeader className="p-4 pb-1">
@@ -24,9 +65,32 @@ const MenuItemCard = ({ name, price, desc }) => {
         <p className="bg-red-300 rounded-tr-lg font-bold p-2.5 font-hind text-gray-900 tracking-[0.06rem]">
           ₹ {price}
         </p>
-        <button className="rounded-tl-lg bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2.5">
-          Add to Cart
-        </button>
+        {quantity === 0 ? (
+          <button
+            className="rounded-tl-lg bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2.5"
+            onClick={handleIncrement}
+          >
+            Add to Cart
+          </button>
+        ) : (
+          <div className="flex items-center">
+            <button
+              className="rounded-tl-lg bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2.5"
+              onClick={handleDecrement}
+            >
+              -
+            </button>
+            <p className="bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2.5">
+              {quantity}
+            </p>
+            <button
+              className=" bg-[#C8F169] font-hind text-gray-900 tracking-[0.06rem] font-bold ring-0 border-0 p-2.5"
+              onClick={handleIncrement}
+            >
+              +
+            </button>
+          </div>
+        )}
       </div>
     </Card>
   );

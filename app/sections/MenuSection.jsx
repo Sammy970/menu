@@ -72,6 +72,7 @@ const MenuSection = () => {
                 return (
                   <MenuItemCard
                     key={item.name}
+                    id={item.id}
                     name={item.name}
                     price={item.price}
                     desc={item.desc}
