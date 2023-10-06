@@ -8,13 +8,13 @@ export const itemMenu = [
               {
                 id: "1",
                 name: "Vic's Sour",
-                price: "INR 500",
+                price: 500,
                 desc: "Whisky - Sakurafresh Amaretto Liquor - Sweet and Sour - Aromatic Bitters XI - Vegan Form",
               },
               {
                 id: "2",
                 name: "Jungle Bird",
-                price: "INR 500",
+                price: 500,
                 desc: "Light Rum, Dark Rum, Campari, Pineapple Juice, Lime Juice, Simple Syrup, Angostura Bitters XI - Vegan Form",
               },
 
@@ -26,13 +26,13 @@ export const itemMenu = [
               {
                 id: "3",
                 name: "Sangria Bianco",
-                price: "INR 425",
+                price: 425,
                 desc: "White Wine, Apple, Bianco Vermouth, Cheery Nut cordial",
               },
               {
                 id: "4",
                 name: "Melon Mimosa",
-                price: "INR 425",
+                price: 425,
                 desc: "Sparkling Wine, Japanese Green Melon, Citrus Juices",
               },
             ],
@@ -42,13 +42,13 @@ export const itemMenu = [
               {
                 id: "5",
                 name: "Clover Club",
-                price: "INR 500",
+                price: 500,
                 desc: "Gin - Raspberry - Citrus - Vegan Foam",
               },
               {
                 id: "6",
                 name: "Gin Basil Smash",
-                price: "INR 500",
+                price: 500,
                 desc: "Gin - Basil - Citrus",
               },
             ],
@@ -64,19 +64,19 @@ export const itemMenu = [
               {
                 id: "7",
                 name: "Ichigo",
-                price: "INR 225",
+                price: 225,
                 desc: "Berry Compote, Passion Fruit, Cranberry Juice, Black Tea, Citrus, Sparkling Water",
               },
               {
                 id: "8",
                 name: "Summer Bloom",
-                price: "INR 250",
+                price: 250,
                 desc: "Italian Red Bitter Liqueur (0.0%). Pink Grapefruit Cordial, OJ, Sea Salt, Sparkling Water",
               },
               {
                 id: "9",
                 name: "Not A Colada",
-                price: "INR 225",
+                price: 225,
                 desc: "Pineapple, Coconut Tart, Vegan Foam, Tropical Bitters",
               },
             ],
@@ -86,19 +86,19 @@ export const itemMenu = [
               {
                 id: "10",
                 name: "Yuzu Bubbly",
-                price: "INR 125",
+                price: 125,
                 desc: "Yuzu - Soda",
               },
               {
                 id: "11",
                 name: "Pink Grapefruit Bubbly",
-                price: "INR 150",
+                price: 150,
                 desc: "Pink Grapefruit - Soda",
               },
               {
                 id: "12",
                 name: "Kafir Lime Bubbly",
-                price: "INR 150",
+                price: 150,
                 desc: "Kafir Lime - Soda",
               },
             ],
@@ -108,12 +108,12 @@ export const itemMenu = [
               {
                 id: "13",
                 name: "Watermelon Juice",
-                price: "INR 125",
+                price: 125,
               },
               {
                 id: "14",
                 name: "Tender Coconut Water",
-                price: "INR 125",
+                price: 125,
               },
             ],
           },
@@ -130,18 +130,21 @@ export const itemMenu = [
           {
             "Quickies | Nibbles": [
               {
+                id: "15",
                 name: "Peanut Masala",
-                price: "INR 150",
+                price: " 150",
                 desc: "Boiled peanuts with green chili paste and assorted greens",
               },
               {
+                id: "16",
                 name: "The Cubbon Park Chaat",
-                price: "INR 120",
+                price: " 120",
                 desc: "Pineapple and sautekaai, chunks with a zesty chilli mix and Congress peanuts",
               },
               {
+                id: "17",
                 name: "CCCP sticks",
-                price: "INR 170",
+                price: " 170",
                 desc: "The good old classic with Cocos twist, cheese cheery chilly pineapple sticks",
               },
             ],
