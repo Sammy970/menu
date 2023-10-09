@@ -123,6 +123,12 @@ const CartItems = () => {
           </TableBody>
         </Table>
       )}
+
+      <div className="w-full m-auto flex items-center justify-center mt-10">
+        <button className="bg-[#C8F169] rounded-lg text-black font-khand tracking-[0.15rem] text-xl py-2 px-5">
+          Order
+        </button>
+      </div>
     </section>
   );
 };
