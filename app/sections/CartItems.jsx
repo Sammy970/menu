@@ -33,6 +33,10 @@ const CartItems = () => {
     }
   };
 
+  const handleOrder = () => {
+    console.log("Your Order: ", cart);
+  };
+
   const totalCost = cart.reduce(
     (total, item) => total + item.quantity * item.price,
     0
@@ -112,7 +116,7 @@ const CartItems = () => {
                   </TableRow>
                 );
               })}
-            <TableRow className="bg-[#C8F169] text-lg text-black font-hind">
+            <TableRow className="bg-[#C8F169] hover:bg-[#C8F169] text-lg text-black font-hind">
               <TableCell className="font-bold text-left">Total</TableCell>
               <TableCell></TableCell>
               <TableCell className="font-bold text-right">
@@ -124,11 +128,16 @@ const CartItems = () => {
         </Table>
       )}
 
-      <div className="w-full m-auto flex items-center justify-center mt-10">
-        <button className="bg-[#C8F169] rounded-lg text-black font-khand tracking-[0.15rem] text-xl py-2 px-5">
-          Order
-        </button>
-      </div>
+      {cart.length > 0 && (
+        <div className="w-full m-auto flex items-center justify-center mt-10">
+          <button
+            onClick={handleOrder}
+            className="bg-[#C8F169] hover:bg-[#a1c254] rounded-lg text-black font-khand tracking-[0.15rem] text-xl py-2 px-5"
+          >
+            Order
+          </button>
+        </div>
+      )}
     </section>
   );
 };
