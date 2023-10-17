@@ -3,7 +3,6 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -12,8 +11,16 @@ import {
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem, updateQuantity } from "@/redux/features/cartSlice";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 const CartItems = () => {
+  const searchParams = useSearchParams();
+
+  const tableNumber = searchParams.get("table");
+
+  const [send, setSend] = useState(false);
+
   const cart = useSelector((state) => state.items);
   const dispatch = useDispatch();
 
@@ -35,7 +42,27 @@ const CartItems = () => {
 
   const handleOrder = () => {
     console.log("Your Order: ", cart);
+    setSend(true);
   };
+
+  const sendOrder = async () => {
+    const response = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify({ cart, tableNumber }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    await response.json();
+    // console.log(data);
+  };
+
+  useEffect(() => {
+    if (send === true) {
+      sendOrder();
+      setSend(false);
+    }
+  }, [send]);
 
   const totalCost = cart.reduce(
     (total, item) => total + item.quantity * item.price,
